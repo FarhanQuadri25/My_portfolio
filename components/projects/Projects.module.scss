@@ -1,0 +1,71 @@
+.paddingContainer {
+  padding-block: 8em;
+  padding-inline: 8em;
+  padding-inline-end: 1.5rem;
+  padding-block-end: 1.8em;
+}
+
+.headingHr {
+  flex-grow: 1;
+  opacity: 0.2;
+  background: linear-gradient(to right, whitesmoke, transparent);
+  height: 1px;
+  border: 0;
+}
+
+.project {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.project img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.9s;
+}
+
+.project:hover img {
+  transform: scale(1.2);
+}
+
+.hoverDetails {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.7em;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.71);
+  backdrop-filter: blur(2.500023px);
+  -webkit-backdrop-filter: blur(2.500023px);
+  transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+}
+
+.project:hover .hoverDetails {
+  opacity: 1;
+}
+
+.hoverDetails h3 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 57px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.hoverDetails p {
+  margin-top: 13px;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 18px;
+  color: #ffffff;
+}

@@ -1,0 +1,17 @@
+.headingHr {
+  flex-grow: 1;
+  opacity: 0.2;
+  background: linear-gradient(to right, whitesmoke, transparent);
+  height: 1px;
+  border: 0;
+}
+
+@media (max-width: 475px) {
+  .about_content {
+    flex-direction: column;
+  }
+}
+
+.paraContainer {
+  max-width: 60ch;
+}
