@@ -3,24 +3,27 @@ import Nav from "@/components/nav/Nav";
 import { DATA_LIST } from "@/data/data";
 import Image from "next/image";
 
-import { GetStaticPaths } from "next";
+interface Params {
+  id: string;
+}
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = DATA_LIST.map((project) => ({
-    params: { id: project.id.toString() },
-  }));
-  return { paths, fallback: false };
-};
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  allImages?: {
+    first: string;
+    second: string;
+    third: string;
+    fourth: string;
+  };
+}
 
-export const generateStaticParams = async () => {
-  return DATA_LIST.map((project) => ({
-    id: project.id.toString(),
-  }));
-};
+export default async function SingleProject({ params }: { params: Params }) {
+  const { id } = params;
 
-export default function SingleProject({ params }: { params: { id: string } }) {
-  const project = DATA_LIST.find(
-    (project) => project.id === parseInt(params.id)
+  const project: Project | undefined = DATA_LIST.find(
+    (project) => project.id === Number(id)
   );
   return (
     <>
@@ -33,15 +36,9 @@ export default function SingleProject({ params }: { params: { id: string } }) {
         />
         <div className="absolute inset-0 flex flex-col justify-between items-center text-white">
           <Nav />
-          {project ? (
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-28 capitalize text-center px-4">
-              {project.title}
-            </h1>
-          ) : (
-            <h1 className="md:text-3xl sm:text-xl font-bold mb-32">
-              Project not found
-            </h1>
-          )}
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-28 capitalize text-center px-4">
+            {project.title}
+          </h1>
         </div>
       </div>
       <div className="new-container section-project">
@@ -56,7 +53,7 @@ export default function SingleProject({ params }: { params: { id: string } }) {
           />
         </h1>
         <p className="text-[#cecece] font-bold font-poppins text-sm sm:text-base md:text-lg lg:text-2xl mt-4 bg-slate-800 p-4 sm:p-6">
-          {project?.description}
+          {project.description}
         </p>
         <h1 className="text-4xl text-[#cecece] font-poppins font-bold uppercase flex items-center mt-8">
           Gallery
@@ -69,7 +66,7 @@ export default function SingleProject({ params }: { params: { id: string } }) {
           />
         </h1>
         <div className="flex flex-wrap mt-8 p-2 gap-4">
-          {project?.allImages && (
+          {project.allImages && (
             <>
               <Image
                 width={300}
@@ -82,25 +79,25 @@ export default function SingleProject({ params }: { params: { id: string } }) {
               <Image
                 width={300}
                 height={300}
-                layout="responsive"
                 src={project.allImages.second}
                 alt={project.title}
+                layout="responsive"
                 className="w-full rounded-2xl"
               />
               <Image
                 width={300}
                 height={300}
-                layout="responsive"
                 src={project.allImages.third}
                 alt={project.title}
+                layout="responsive"
                 className="w-full rounded-2xl"
               />
               <Image
                 width={300}
                 height={300}
-                layout="responsive"
                 src={project.allImages.fourth}
                 alt={project.title}
+                layout="responsive"
                 className="w-full rounded-2xl"
               />
             </>
