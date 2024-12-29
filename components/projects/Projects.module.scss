@@ -69,3 +69,18 @@
   line-height: 18px;
   color: #ffffff;
 }
+
+
+@media (max-width: 768px) {
+  .hoverDetails {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+
+@media (max-width:720px){
+  .projectsFlex a{
+    flex-basis: 100%;
+  }
+}

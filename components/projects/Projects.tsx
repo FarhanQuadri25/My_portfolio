@@ -71,7 +71,7 @@ const Projects = () => {
           className={`${styles.headingHr}`}
         />
       </div>
-      <div className="flex flex-wrap mt-[1em] gap-14 items-center justify-center">
+      <div className={`flex flex-wrap justify-center projectFlex  items-center gap-5 ${styles.projectsFlex}`}>
         {data.map((project) => (
           <Project key={project.id} {...project} />
         ))}
