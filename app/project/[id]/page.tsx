@@ -59,7 +59,6 @@ export default async function SingleProject({ params }: { params: Params }) {
         <div className="flex flex-wrap mt-8 p-2 gap-4">
           {project?.allImages && (
             <>
-              import Image from "next/image";
               <Image
                 width={300}
                 height={300}
