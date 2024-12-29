@@ -3,13 +3,25 @@ import Nav from "@/components/nav/Nav";
 import { DATA_LIST } from "@/data/data";
 import Image from "next/image";
 
-export default async function SingleProject({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = params;
-  const project = DATA_LIST.find((project) => project.id === parseInt(id));
+import { GetStaticPaths } from "next";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = DATA_LIST.map((project) => ({
+    params: { id: project.id.toString() },
+  }));
+  return { paths, fallback: false };
+};
+
+export const generateStaticParams = async () => {
+  return DATA_LIST.map((project) => ({
+    id: project.id.toString(),
+  }));
+};
+
+export default function SingleProject({ params }: { params: { id: string } }) {
+  const project = DATA_LIST.find(
+    (project) => project.id === parseInt(params.id)
+  );
   return (
     <>
       <div className="relative h-[30vh]">
