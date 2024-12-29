@@ -3,12 +3,8 @@ import Nav from "@/components/nav/Nav";
 import { DATA_LIST } from "@/data/data";
 import Image from "next/image";
 
-interface Params {
-  id: string;
-}
-
-export default async function SingleProject({ params }: { params: Params }) {
-  const { id } = params;
+export default async function SingleProject({ params }: { params: any }) {
+  const { id } = await params;
   const project = DATA_LIST.find((project) => project.id === parseInt(id));
   return (
     <>
