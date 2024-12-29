@@ -3,8 +3,8 @@
 import GitHub from "@/svg/GitHub";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { FaGithub } from "react-icons/fa6";
-// react icons of github
+
+
 
 const Nav = () => {
   return (

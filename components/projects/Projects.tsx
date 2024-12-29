@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { DATA_LIST } from "@/data/data";
 import styles from "./Projects.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectProps {
   id: number;
@@ -32,7 +33,13 @@ const Project = (props: ProjectProps) => {
         viewport={{ once: true, amount: 0.7 }}
         className={styles.project}
       >
-        <img src={props.src} alt={props.title} />
+        <Image
+          width={300}
+          height={300}
+          layout="responsive"
+          src={props.src}
+          alt={props.title}
+        />
         <div className={styles.hoverDetails}>
           <h3>{props.title}</h3>
           <p>{props.description}</p>

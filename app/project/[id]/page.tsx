@@ -1,6 +1,7 @@
 import { MotionDiv } from "@/components/motion/MotionDiv";
 import Nav from "@/components/nav/Nav";
 import { DATA_LIST } from "@/data/data";
+import Image from "next/image";
 
 interface Params {
   id: string;
@@ -12,8 +13,9 @@ export default async function SingleProject({ params }: { params: Params }) {
   return (
     <>
       <div className="relative h-[30vh]">
-        <img
+        <Image
           src="/img/coding.jpg"
+          layout="fill"
           alt="coding"
           className="w-full h-full object-cover opacity-30"
         />
@@ -57,22 +59,35 @@ export default async function SingleProject({ params }: { params: Params }) {
         <div className="flex flex-wrap mt-8 p-2 gap-4">
           {project?.allImages && (
             <>
-              <img
+              import Image from "next/image";
+              <Image
+                width={300}
+                height={300}
                 src={project.allImages.first}
                 alt={project.title}
-                className="w-full rounded-2xl"
+                layout="responsive"
+                className="w-full object-cover rounded-2xl"
               />
-              <img
+              <Image
+                width={300}
+                height={300}
+                layout="responsive"
                 src={project.allImages.second}
                 alt={project.title}
                 className="w-full rounded-2xl"
               />
-              <img
+              <Image
+                width={300}
+                height={300}
+                layout="responsive"
                 src={project.allImages.third}
                 alt={project.title}
                 className="w-full rounded-2xl"
               />
-              <img
+              <Image
+                width={300}
+                height={300}
+                layout="responsive"
                 src={project.allImages.fourth}
                 alt={project.title}
                 className="w-full rounded-2xl"

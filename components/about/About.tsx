@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import styles from "./About.module.scss";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -55,11 +56,13 @@ const About = () => {
           transition={{ delay: 0.3, duration: 0.7, type: "tween" }}
           viewport={{ once: true, amount: 0.7 }}
         >
-          <img
+          <Image
             src="/img/portfolio-img.avif"
             alt="portfolio-photo"
             width={1200}
             height={800}
+            layout="responsive"
+            className="rounded-3xl"
           />
         </motion.div>
       </div>
