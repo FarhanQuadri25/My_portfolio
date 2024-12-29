@@ -34,7 +34,7 @@ export default async function SingleProject({ params }: { params: Params }) {
       </div>
       <div className="new-container section-project">
         <h1 className="text-4xl text-[#cecece] font-poppins font-bold uppercase flex items-center">
-          overview{" "}
+          overview
           <MotionDiv
             initial={{ opacity: 0, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +47,7 @@ export default async function SingleProject({ params }: { params: Params }) {
           {project?.description}
         </p>
         <h1 className="text-4xl text-[#cecece] font-poppins font-bold uppercase flex items-center mt-8">
-          Gallery{" "}
+          Gallery
           <MotionDiv
             initial={{ opacity: 0, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
