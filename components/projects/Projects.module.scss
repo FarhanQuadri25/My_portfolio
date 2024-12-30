@@ -77,17 +77,15 @@
   }
 }
 
-@media (min-width: 600px) {
-  .projectsFlex {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
-  }
+.projectsFlex {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5em;
 }
 
-@media (max-width: 599px) {
+
+@media (min-width:599px){
   .projectsFlex {
-    grid-template-columns: repeat(1, 1fr);
-    gap:1.8em;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
