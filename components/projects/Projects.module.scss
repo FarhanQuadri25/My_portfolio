@@ -88,5 +88,6 @@
 @media (max-width: 599px) {
   .projectsFlex {
     grid-template-columns: repeat(1, 1fr);
+    gap:1.8em;
   }
 }
