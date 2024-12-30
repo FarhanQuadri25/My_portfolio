@@ -26,7 +26,7 @@ const Contact = () => {
       <h2 className="text-5xl text-center font-bold font-poppins text-[#cecece]">
         Contact Me
       </h2>
-      <div className={` flex justify-center flex-wrap ${styles.contactlinks} `}>
+      <div className={` flex justify-center flex-wrap  `}>
         <Links href="https://github.com/FarhanQuadri25" name="GitHub" />
         <Links
           href="https://www.linkedin.com/in/syed-qader-pasha-quadri/"

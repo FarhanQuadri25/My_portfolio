@@ -70,7 +70,6 @@
   color: #ffffff;
 }
 
-
 @media (max-width: 768px) {
   .hoverDetails {
     backdrop-filter: none;
@@ -78,9 +77,16 @@
   }
 }
 
+@media (min-width: 600px) {
+  .projectsFlex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+}
 
-@media (max-width:720px){
-  .projectsFlex a{
-    flex-basis: 100%;
+@media (max-width: 599px) {
+  .projectsFlex {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

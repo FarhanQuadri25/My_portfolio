@@ -61,7 +61,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.7 }}
           className="text-3xl font-poppins text-[#cecece] flex-grow-0 font-bold"
         >
-          Skills I have
+          Projects
         </motion.h3>
         <motion.hr
           initial={{ opacity: 0, x: 15 }}
@@ -71,7 +71,7 @@ const Projects = () => {
           className={`${styles.headingHr}`}
         />
       </div>
-      <div className={`flex flex-wrap justify-center projectFlex  items-center gap-5 ${styles.projectsFlex}`}>
+      <div className={` ${styles.projectsFlex}`}>
         {data.map((project) => (
           <Project key={project.id} {...project} />
         ))}
