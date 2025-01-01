@@ -21,10 +21,10 @@ export const DATA_LIST: Data[] = [
         description: "A sophisticated application built with Next.js, TypeScript, and Tailwind CSS, featuring cloud storage capabilities. Users can securely store, access, and manage their data from anywhere globally. The app also allows seamless sharing of data via email and provides options to delete or upload data to the cloud with ease.",
         src: "/img/First-Project.png",
         allImages: {
-            first: "/img/store-new-1.png",
-            second: "/img/store-new-2.png",
-            third: "/img/store-new-3.png",
-            fourth: "/img/store-new-4.png"
+            first: "/img/new-store (1).png",
+            second: "/img/new-store (1).png",
+            third: "/img/new-store (1).png",
+            fourth: "/img/new-store (1).png"
         }
 
     },
