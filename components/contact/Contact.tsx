@@ -8,7 +8,7 @@ type LinkProps = {
 };
 const Links: React.FC<LinkProps> = ({ href, name }) => {
   return (
-    <div className="font-poppins font-bold sm:text-3xl md:text-4xl ml-6">
+    <div className="font-inter font-bold sm:text-3xl md:text-4xl ml-6">
       <a className="hrefs" href={href} target="_blank" rel="noreferrer">
         <span>{name}</span> <ArrowSide />
       </a>

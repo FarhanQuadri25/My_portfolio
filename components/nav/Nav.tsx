@@ -4,8 +4,6 @@ import GitHub from "@/svg/GitHub";
 import Link from "next/link";
 import { motion } from "motion/react";
 
-
-
 const Nav = () => {
   return (
     <header className="new-container">
@@ -19,7 +17,7 @@ const Nav = () => {
               delay: 0.5,
               type: "tween",
             }}
-            className={`font-poppins font-bold text-white text-3xl`}
+            className={`font-inter font-bold text-white text-3xl`}
           >
             Syed_Qader
           </motion.p>

@@ -57,7 +57,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.7 }}
         >
           <Image
-            src="/img/portfolio-img.avif"
+            src="/img/computer-portfolio.jpg"
             alt="portfolio-photo"
             width={1200}
             height={800}
