@@ -22,9 +22,9 @@ export const DATA_LIST: Data[] = [
         src: "/img/First-Project.png",
         allImages: {
             first: "/img/new-store (1).png",
-            second: "/img/new-store (1).png",
-            third: "/img/new-store (1).png",
-            fourth: "/img/new-store (1).png"
+            second: "/img/new-store (2).png",
+            third: "/img/new-store (3).png",
+            fourth: "/img/new-store (4).png"
         }
 
     },
