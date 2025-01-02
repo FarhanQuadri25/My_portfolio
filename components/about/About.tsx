@@ -45,7 +45,7 @@ const About = () => {
           </p>
           <br />
 
-          <p className="text-[#cecece] text-lg font-poppins">
+          <p className="text-[#cecece] text-lg  font-poppins">
             I&apos;ve been upto date with the latest technologies and have
             experience in working with various libraries and frameworks
           </p>

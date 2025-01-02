@@ -3,11 +3,12 @@
 import GitHub from "@/svg/GitHub";
 import Link from "next/link";
 import { motion } from "motion/react";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
   return (
     <header className="new-container">
-      <nav className="flex justify-between items-center py-4 px-8 ">
+      <nav className={`flex justify-between items-center ${styles.nav__adjust} py-4 px-8`} >
         <Link href={"/"}>
           <motion.p
             initial={{ opacity: 0, x: -30 }}
