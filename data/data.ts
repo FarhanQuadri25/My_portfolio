@@ -19,7 +19,7 @@ export const DATA_LIST: Data[] = [
         id: 1,
         title: "MY_STORE_DRIVE",
         description: "A sophisticated application built with Next.js, TypeScript, and Tailwind CSS, featuring cloud storage capabilities. Users can securely store, access, and manage their data from anywhere globally. The app also allows seamless sharing of data via email and provides options to delete or upload data to the cloud with ease.I used appwrite for email authentication and verfication and also storing data to the cloud",
-        src: "/img/latest-store.png",
+        src: "/img/latest-store-1.png",
         allImages: {
             first: "/img/new-store (1).png",
             second: "/img/new-store (2).png",
